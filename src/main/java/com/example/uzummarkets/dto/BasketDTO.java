@@ -1,17 +1,15 @@
-package com.example.uzummarkets.entity;
+package com.example.uzummarkets.dto;
 
 import jakarta.persistence.Entity;
 import lombok.*;
 
 import java.util.UUID;
-
-@Entity(name = "baskets")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Builder
-public class BasketEntity extends BaseEntity{
+public class BasketDTO {
     private UUID product_id;
     private UUID user_id;
 }

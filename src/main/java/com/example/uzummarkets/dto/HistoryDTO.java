@@ -1,17 +1,17 @@
-package com.example.uzummarkets.entity;
+package com.example.uzummarkets.dto;
 
 import jakarta.persistence.Entity;
 import lombok.*;
 
 import java.util.UUID;
 
-@Entity(name = "histories")
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Builder
-public class HistoryEntity extends BaseEntity {
+public class HistoryDTO {
     private String name;
     private Double price;
     private Integer amount;
