@@ -9,11 +9,12 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
+@ToString
 public class UserDTO{
     private String name;
-    private String username;
+    private String email;
     private String password;
-    private UserRole role;
+    private String role;
     private Boolean isBlock;
 }
 

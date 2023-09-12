@@ -7,7 +7,6 @@ import com.example.uzummarkets.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-
 import java.util.UUID;
 
 @Service
