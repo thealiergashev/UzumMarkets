@@ -1,6 +1,5 @@
 package com.example.uzummarkets.controller;
 
-
 import com.example.uzummarkets.dto.UserDTO;
 import com.example.uzummarkets.entity.UserEntity;
 import com.example.uzummarkets.service.UserService;
@@ -17,7 +16,7 @@ public class AuthController {
     public ResponseEntity<UserEntity> signUp(
             @RequestBody UserDTO userDTO
             ) {
-        return ResponseEntity.ok(userService.save(userDTO));
+       return ResponseEntity.ok(userService.save(userDTO));
     }
 
     @GetMapping("/sign-in")

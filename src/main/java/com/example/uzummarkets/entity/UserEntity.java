@@ -9,11 +9,12 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
+@ToString
 public class UserEntity extends BaseEntity {
     private String name;
     private String email;
     private String password;
-    private UserRole role;
+    private String role;
     private Boolean isBlock;
 
 
