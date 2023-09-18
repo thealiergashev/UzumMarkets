@@ -1,7 +1,6 @@
-package com.example.uzummarkets.dto;
+package com.example.uzummarkets.dto.create;
 
 
-import com.example.uzummarkets.entity.UserRole;
 import lombok.*;
 
 @AllArgsConstructor
@@ -10,7 +9,7 @@ import lombok.*;
 @Setter
 @Builder
 @ToString
-public class UserDTO{
+public class UserRequest {
     private String name;
     private String email;
     private String password;

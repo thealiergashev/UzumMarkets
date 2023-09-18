@@ -1,7 +1,8 @@
-package com.example.uzummarkets.dto;
+package com.example.uzummarkets.dto.response;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @AllArgsConstructor
@@ -9,11 +10,13 @@ import java.util.UUID;
 @Getter
 @Setter
 @Builder
-public class ProductDTO {
+public class HistoryResponse {
     private String name;
     private Double price;
     private Integer amount;
     private String category_name;
     private UUID owner_id;
-    ///1234
+    private UUID customer_id;
+    private LocalDateTime createDate;
+    private LocalDateTime updateDate;
 }

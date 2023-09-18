@@ -1,6 +1,6 @@
 package com.example.uzummarkets.controller;
 
-import com.example.uzummarkets.dto.UserDTO;
+import com.example.uzummarkets.dto.create.UserRequest;
 import com.example.uzummarkets.entity.UserEntity;
 import com.example.uzummarkets.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +14,7 @@ public class AuthController {
     private final UserService userService;
     @PostMapping("/sign-up")
     public ResponseEntity<UserEntity> signUp(
-            @RequestBody UserDTO userDTO
+            @RequestBody UserRequest userDTO
             ) {
        return ResponseEntity.ok(userService.save(userDTO));
     }
@@ -24,6 +24,8 @@ public class AuthController {
             @RequestParam String email,
             @RequestParam String password
     ) {
+        System.out.println("email = " + email);
+        System.out.println("password = " + password);
         return ResponseEntity.ok(userService.signIn(email, password));
     }
 }

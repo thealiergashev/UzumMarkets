@@ -1,6 +1,5 @@
-package com.example.uzummarkets.dto;
+package com.example.uzummarkets.dto.create;
 
-import jakarta.persistence.Entity;
 import lombok.*;
 
 import java.util.UUID;
@@ -9,7 +8,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Builder
-public class BasketDTO {
+public class BasketRequest {
     private UUID product_id;
     private UUID user_id;
 }

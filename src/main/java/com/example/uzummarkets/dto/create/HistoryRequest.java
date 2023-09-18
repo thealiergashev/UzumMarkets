@@ -1,6 +1,5 @@
-package com.example.uzummarkets.dto;
+package com.example.uzummarkets.dto.create;
 
-import jakarta.persistence.Entity;
 import lombok.*;
 
 import java.util.UUID;
@@ -11,7 +10,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Builder
-public class HistoryDTO {
+public class HistoryRequest {
     private String name;
     private Double price;
     private Integer amount;
