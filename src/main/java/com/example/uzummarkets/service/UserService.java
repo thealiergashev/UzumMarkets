@@ -32,8 +32,6 @@ public class UserService extends BaseService<
     }
 
     public UserEntity signIn(String email, String password) {
-        System.out.println(email);
-        System.out.println(password);
         return userRepository.findByEmailAndPassword(email, password).orElseThrow(() -> {
             throw new DataNotFoundException("user not found");
         });

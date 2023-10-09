@@ -3,8 +3,8 @@ package com.example.uzummarkets.service;
 import com.example.uzummarkets.dto.create.ProductRequest;
 import com.example.uzummarkets.dto.response.ProductResponse;
 import com.example.uzummarkets.entity.ProductEntity;
+import com.example.uzummarkets.entity.UserEntity;
 import com.example.uzummarkets.repository.ProductRepository;
-import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -19,8 +19,10 @@ public class ProductService extends BaseService<
         ProductRequest
         >{
 
-    public ProductService(ProductRepository repository, ModelMapper modelMapper) {
+    private final ProductRepository productRepository;
+    public ProductService(ProductRepository repository, ModelMapper modelMapper, ProductRepository productRepository) {
         super(repository, modelMapper);
+        this.productRepository = productRepository;
     }
 
     @Override
@@ -31,5 +33,10 @@ public class ProductService extends BaseService<
     @Override
     protected ProductEntity mapCRToEntity(ProductRequest createReq) {
         return null;
+    }
+
+    public ProductEntity save(ProductRequest productRequest) {
+        ProductEntity product = modelMapper.map(productRequest, ProductEntity.class);
+        return productRepository.save(product);
     }
 }

@@ -24,8 +24,6 @@ public class AuthController {
             @RequestParam String email,
             @RequestParam String password
     ) {
-        System.out.println("email = " + email);
-        System.out.println("password = " + password);
         return ResponseEntity.ok(userService.signIn(email, password));
     }
 }
